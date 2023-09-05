@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<h2 class="mb-4 font-weight-bold">{{ post.title }}</h2>
+	<p class="">by {{ post.author }}, {{ post.date }}</p>
+	<div>{{ post.content }}</div>
+	<p>For more information visit <a href="https://timber.github.io/docs/">Timber Docs</a></p>
+
+
+	<div class="">
+		{{ post.title }}
+		{{ post.content|excerpt(20)}}
+		{{ post.preview }}
+		{{ post.author }}
+		{{ post.date }}
+		{{ post.time }}
+		{{ post.id }}
+		{{ post.status }}
+		{{ post.type }}
+		{{ post.slug }}
+		{{ post.link }}
+
+		{# add some categories and tags to see something here #}
+		{{ post.categories|join(', ') }}
+		{{ post.tags|join(', ') }}
+		{{ rpost.terms|join(', ') }}
+
+	</div>
+
+	{# show block #}
+	{% for item in blocks %}
+		{% if post.id == item.related_page %}
+			<section class="{{ item.style }}">
+				<h2 class="{{ item.style }}__title">{{ item.true_title }}</h2>
+				<div class="{{ item.style }}__content">
+					{{ item.content }}
+				</div>
+				<div>
+				{% if item.related_post %}
+					{# include related post #}
+					{# {% include "templates/posts/related/related--" ~ item.related_post ~ ".twig" %} #}
+				{% endif %}
+				</div>
+			</section>
+		{% endif %}
+	{% endfor %}
+
+{% endblock %}
