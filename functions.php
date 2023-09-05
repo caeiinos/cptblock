@@ -156,4 +156,267 @@ class StarterSite extends Timber\Site {
 
 }
 
+add_action( 'acf/include_fields', function() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+		return;
+	}
+
+	acf_add_local_field_group( array(
+	'key' => 'group_64f4a297d1f99',
+	'title' => 'Order',
+	'fields' => array(
+		array(
+			'key' => 'field_64f4a2988c75d',
+			'label' => 'order',
+			'name' => 'order',
+			'aria-label' => '',
+			'type' => 'number',
+			'instructions' => 'Order of the block',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'min' => '',
+			'max' => '',
+			'placeholder' => '',
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'block',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'Order of the block',
+	'show_in_rest' => 0,
+) );
+
+	acf_add_local_field_group( array(
+	'key' => 'group_64f498e09b9f5',
+	'title' => 'Related Page',
+	'fields' => array(
+		array(
+			'key' => 'field_64f498e0bf618',
+			'label' => 'related_page',
+			'name' => 'related_page',
+			'aria-label' => '',
+			'type' => 'page_link',
+			'instructions' => 'Connection between the page and the block',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => '',
+			'post_status' => '',
+			'taxonomy' => '',
+			'allow_archives' => 1,
+			'multiple' => 0,
+			'allow_null' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'block',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'Connection between the page and the block',
+	'show_in_rest' => 0,
+) );
+
+	acf_add_local_field_group( array(
+	'key' => 'group_64f4ab39bf618',
+	'title' => 'Related Post',
+	'fields' => array(
+		array(
+			'key' => 'field_64f4ab3903873',
+			'label' => 'related_post',
+			'name' => 'related_post',
+			'aria-label' => '',
+			'type' => 'select',
+			'instructions' => 'name of the related posts type',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'photo' => 'photo',
+				'look' => 'look',
+			),
+			'default_value' => false,
+			'return_format' => 'value',
+			'multiple' => 0,
+			'allow_null' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'block',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'name of the related posts type',
+	'show_in_rest' => 0,
+) );
+
+	acf_add_local_field_group( array(
+	'key' => 'group_64f4a8bc2169d',
+	'title' => 'Style',
+	'fields' => array(
+		array(
+			'key' => 'field_64f4a8bcf135a',
+			'label' => 'style',
+			'name' => 'style',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => 'Name of the style applied to the block',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'block',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'Name of the style applied to the block',
+	'show_in_rest' => 0,
+) );
+
+	acf_add_local_field_group( array(
+	'key' => 'group_64f7373a59a77',
+	'title' => 'true title',
+	'fields' => array(
+		array(
+			'key' => 'field_64f7373a642df',
+			'label' => 'true_title',
+			'name' => 'true_title',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => 'true title',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'block',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'true title',
+	'show_in_rest' => 0,
+) );
+} );
+
+add_action( 'init', function() {
+	register_post_type( 'block', array(
+	'labels' => array(
+		'name' => 'blocks',
+		'singular_name' => 'block',
+		'menu_name' => 'Mes blocks',
+	),
+	'description' => 'ce sont les blocks/paragraphes/section d\'une page',
+	'public' => true,
+	'show_in_rest' => true,
+	'menu_icon' => 'dashicons-welcome-write-blog',
+	'supports' => array(
+		0 => 'title',
+		1 => 'editor',
+		2 => 'thumbnail',
+	),
+	'can_export' => false,
+	'delete_with_user' => false,
+) );
+} );
+
+
+
 new StarterSite();

@@ -4,8 +4,6 @@
 * timber & twig (Composer)
 * laravel-mix
 * babel
-* Custom Post Type
-* Advanced Custom Field
 
 ## Install
 
@@ -15,8 +13,6 @@
 3. `composer install` - Timber installation (`/vendor` folder will be created)
 4. `npm install` - Gulp, Bootstrap, BrowserSync, Sass, Autoprefixer, Cssnano installation (`/node-modules` folder will be created)
 5. Activate theme in WP Admin panel
-6. Activate Custom Post Type plugin 
-7. Activate Advanced Custom Field plugin 
 
 ## Features
 
@@ -25,7 +21,7 @@
 - Copy `src/assets/*/` to `dist/assets/*/` folder.
 - Compile SASS `src/styles/app.scss` to `dist/styles` folder.
 - Bundle and transpile JS `src/scripts/app.js` to `dist/scripts` folder.
-- Run a dev web server with browsersync.
+- blocks post type and custom field for blocks in `function.php`
 - Has babel built in.
 - fichier `js.map` et `css.map`
 
