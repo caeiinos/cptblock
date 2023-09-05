@@ -50,8 +50,8 @@
 
 - `npm dev` : build on files changes.
 - `npm devlopement` : build on files changes.
-- `npm start` : build on files changes, launch a dev server with browsersync.
-- `npm watch` : build on files changes, launch a dev server with browsersync.
+- `npm start` : build on files changes
+- `npm watch` : build on files changes
 - `npm run clean` : clean the `dist` folder.
 - `npm run build` : create `dist` folder with minification.
 
